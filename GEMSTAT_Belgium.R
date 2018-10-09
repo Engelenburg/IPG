@@ -4,6 +4,10 @@
 
 #import and read csv file 
 data_base = read.csv("/Users/mar_t/Desktop/Samples.csv", header=TRUE,sep=";", dec = ".")
+#Anje: "/Users/Anje/Desktop/Data/parameter_request/samples.csv"
+#Martijn: "/Users/mar_t/Desktop/Samples.csv"
+#Rosa:
+#Tonyan:
 
 #summarize data in database
 summary(data_base)
