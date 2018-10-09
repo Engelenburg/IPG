@@ -15,7 +15,7 @@ library(rfishbase)
 
 ?rgdal
 
-#Reading in the file that has the fish occurance data in Belgium
+#Reading in the file that has the fish occurance data in Belgium 
 AllData = read.csv("D:/Documenten/Data IPG/FIsh_Belgium.csv", header=TRUE,sep="\t", dec = ".")
 
 #Filtering out all the na values in the latitude, longitude columns
