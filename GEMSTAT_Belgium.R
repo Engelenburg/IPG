@@ -1,6 +1,6 @@
 # Install libraries
 # install.packages("reshape2")
-# library(reshape2)
+library(reshape2)
 
 #import and read csv file 
 data_base = read.csv("/Users/mar_t/Desktop/Samples.csv", header=TRUE,sep=";", dec = ".")
