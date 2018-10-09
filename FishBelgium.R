@@ -21,6 +21,9 @@ AllData = read.csv("D:/Documenten/Data IPG/FIsh_Belgium.csv", header=TRUE,sep="\
 #Filtering out all the na values in the latitude, longitude columns
 AllData <- AllData[!is.na(AllData$decimallatitude)&!is.na(AllData$decimallongitude),]
 
+#Testing changes GIT
+AllData2 <- AllData[!is.na(AllData$decimallatitude)&!is.na(AllData$decimallongitude),]
+
 #Making coordinates out of the longitude+latitude data
 coordinates(AllData)<-~decimallongitude + decimallatitude
 
