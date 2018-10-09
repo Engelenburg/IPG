@@ -1,8 +1,8 @@
 library(rfishbase)
+source("GBIF_Belgium.R")
+s <- AllData$species
+Species <- unique(Species)
 
-Belgium <- country(  limit = 200)
-
-
-c_code(056 )
-#changes
+morpho <- morphology(species_list = Species)
+eat <-diet(species_list = Species)
 

@@ -1,16 +1,13 @@
 
 ## I change something here_TY
 # loading the required packages
-install.packages("ggplot2")
-install.packages("ggmap")
-
-sp
-
-install.packages("rfishbase")
-install.packages("rgdal")
-install.packages("sp")
-install.packages("raster")
-update.packages("sp")
+# install.packages("ggplot2")
+# install.packages("ggmap")
+# install.packages("rfishbase")
+# install.packages("rgdal")
+# install.packages("sp")
+# install.packages("raster")
+# update.packages("sp")
 library(raster)
 library(sp)
 library(rfishbase)
@@ -22,6 +19,8 @@ AllData = read.csv("D:/Documenten/Data IPG/FIsh_Belgium.csv", header=TRUE,sep="\
 
 #Filtering out all the na values in the latitude, longitude columns
 AllData <- AllData[!is.na(AllData$decimallatitude)&!is.na(AllData$decimallongitude),]
+
+
 
 #Making coordinates out of the longitude+latitude data
 coordinates(AllData)<-~decimallongitude + decimallatitude
