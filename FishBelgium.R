@@ -22,7 +22,8 @@ AllData = read.csv("D:/Documenten/Data IPG/FIsh_Belgium.csv", header=TRUE,sep="\
 AllData <- AllData[!is.na(AllData$decimallatitude)&!is.na(AllData$decimallongitude),]
 
 #Testing changes GIT
-AllData2 <- AllData[!is.na(AllData$decimallatitude)&!is.na(AllData$decimallongitude),]
+AllData3 <- AllData[!is.na(AllData$decimallatitude)&!is.na(AllData$decimallongitude),]
+
 
 #Making coordinates out of the longitude+latitude data
 coordinates(AllData)<-~decimallongitude + decimallatitude
