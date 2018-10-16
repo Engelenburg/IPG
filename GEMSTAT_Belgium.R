@@ -57,3 +57,57 @@ BEL_11 = subset(Nice_Data, Nice_Data$GEMS.Station.Number %in% "BEL00011")
 BEL_12 = subset(Nice_Data, Nice_Data$GEMS.Station.Number %in% "BEL00012")
 BEL_13 = subset(Nice_Data, Nice_Data$GEMS.Station.Number %in% "BEL00013")
 BEL_14 = subset(Nice_Data, Nice_Data$GEMS.Station.Number %in% "BEL00014")
+
+
+#Plotting MBAS Values of stations 1-13 in grid plot 
+
+library(ggplot2)
+library(cowplot)
+
+plot_bel1 = ggplot(data=BEL_1, aes(x=as.Date(BEL_1$Sample.Date), y=BEL_1$MBAS, group=1)) +
+  geom_line(color="yellow")+
+  geom_point(size=0.7) + 
+  theme(axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_text(size=8), axis.text.y=element_text(size=8)) 
+
+plot_bel6 = ggplot(data=BEL_6, aes(x=as.Date(BEL_6$Sample.Date), y=BEL_6$MBAS, group=1)) +
+  geom_line(color="pink") +
+  geom_point(size=0.7) +
+  theme(axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_text(size=8), axis.text.y=element_text(size=8))
+
+plot_bel7 = ggplot(data=BEL_7, aes(x=as.Date(BEL_7$Sample.Date), y=BEL_7$MBAS, group=1)) +
+  geom_line(color="red") +
+  geom_point(size=0.7) +
+  theme(axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_text(size=8), axis.text.y=element_text(size=8))
+
+plot_bel8 = ggplot(data=BEL_8, aes(x=as.Date(BEL_8$Sample.Date), y=BEL_8$MBAS, group=1)) +
+  geom_line(color="green") +
+  geom_point(size=0.7) +
+  theme(axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_text(size=8), axis.text.y=element_text(size=8))
+
+plot_bel9 = ggplot(data=BEL_9, aes(x=as.Date(BEL_9$Sample.Date), y=BEL_9$MBAS, group=1)) +
+  geom_line(color="brown") +
+  geom_point(size=0.7) +
+  theme(axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_text(size=8), axis.text.y=element_text(size=8))
+
+plot_bel10 = ggplot(data=BEL_10, aes(x=as.Date(BEL_10$Sample.Date), y=BEL_10$MBAS, group=1)) +
+  geom_line(color="blue") +
+  geom_point(size=0.7) +
+  theme(axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_text(size=8), axis.text.y=element_text(size=8))
+
+plot_bel11 = ggplot(data=BEL_11, aes(x=as.Date(BEL_11$Sample.Date), y=BEL_11$MBAS, group=1)) +
+  geom_line(color="darkgreen") +
+  geom_point(size=0.7) +
+  theme(axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_text(size=8), axis.text.y=element_text(size=8))
+
+plot_bel12 = ggplot(data=BEL_12, aes(x=as.Date(BEL_12$Sample.Date), y=BEL_12$MBAS, group=1)) +
+  geom_line(color="purple") +
+  geom_point(size=0.7) +
+  theme(axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_text(size=8), axis.text.y=element_text(size=8))
+
+plot_bel13 = ggplot(data=BEL_13, aes(x=as.Date(BEL_13$Sample.Date), y=BEL_13$MBAS, group=1)) +
+  geom_line(color="darkblue") +
+  geom_point(size=0.7) +
+  theme(axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_text(size=8), axis.text.y=element_text(size=8))
+
+plot_grid(plot_bel1, plot_bel6, plot_bel7,plot_bel8, plot_bel9, plot_bel10, plot_bel11, plot_bel12, plot_bel13)
+
