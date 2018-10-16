@@ -19,6 +19,9 @@ BEL <- SubData[grep("BEL", SubData$GEMS.Station.Number),]
 #Making the dataset into single rows for different pollutants so we can work it for analyses
 Nice_Data<-dcast(BEL, GEMS.Station.Number +Sample.Date  ~Parameter.Code, mean, value.var = 'Value')
 
+#let R know that Sample.Data are in format year-month-day
+Nice_Data <- as.Date(Nice_Data$Sample.Date, "%Y-%m-%d")
+
 #length(unique(MBAS$GEMS.Station.Number))
 #coordinates(df)<- ~lat+lon plot
 
