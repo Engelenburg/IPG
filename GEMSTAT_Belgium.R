@@ -111,3 +111,10 @@ plot_bel13 = ggplot(data=BEL_13, aes(x=as.Date(BEL_13$Sample.Date), y=BEL_13$MBA
 
 plot_grid(plot_bel1, plot_bel6, plot_bel7,plot_bel8, plot_bel9, plot_bel10, plot_bel11, plot_bel12, plot_bel13)
 
+#Plotting Tensides and MBAS of station 7
+ggplot(data=BEL_7, aes(as.Date(BEL_7$Sample.Date))) + 
+  geom_line(aes(y=BEL_7$MBAS, colour = "red")) + geom_line(aes(y=BEL_7$NH3N, colour = "blue")) 
+
+# Calculating Pearson's product-moment correlation
+cor.test(BEL_7$MBAS, BEL_7$NH3N, method = "pearson")
+
