@@ -118,3 +118,51 @@ ggplot(data=BEL_7, aes(as.Date(BEL_7$Sample.Date))) +
 # Calculating Pearson's product-moment correlation
 cor.test(BEL_7$MBAS, BEL_7$NH3N, method = "pearson")
 
+#comparing stations values in boxplots
+#Comparing MBAS values: 7 is excessively high 
+boxplot(BEL_1$MBAS, BEL_6$MBAS, BEL_7$MBAS, BEL_8$MBAS, BEL_9$MBAS, BEL_10$MBAS, BEL_11$MBAS,BEL_12$MBAS, BEL_13$MBAS, BEL_14$MBAS,
+        xlab = "station", ylab = "MBAS value in mg/L", 
+        main = "BELGIUM", names = c("1", "6", "7", "8", "9", "10", "11", "12", "13", "14"
+                                    ))
+#Comparing NH3N values: 7 is excessively high 
+boxplot(BEL_1$NH3N, BEL_6$NH3N, BEL_7$NH3N, BEL_8$NH3N, BEL_9$NH3N, BEL_10$NH3N, BEL_11$NH3N,BEL_12$NH3N, BEL_13$NH3N, BEL_14$NH3N,
+        xlab = "station", ylab = "NH3N value in mg/L", 
+        main = "BELGIUM", names = c("1", "6", "7", "8", "9", "10", "11", "12", "13", "14"
+        ))
+
+#Comparing temperature: relatively the same 
+boxplot(BEL_1$TEMP, BEL_6$TEMP, BEL_7$TEMP, BEL_8$TEMP, BEL_9$TEMP, BEL_10$TEMP, BEL_11$TEMP,BEL_12$TEMP, BEL_13$TEMP, BEL_14$TEMP,
+        xlab = "station", ylab = "TEMP value in C", 
+        main = "BELGIUM", names = c("1", "6", "7", "8", "9", "10", "11", "12", "13", "14"
+        ))
+
+#Comparing pH: 7 is very low 
+boxplot(BEL_1$pH, BEL_6$pH, BEL_7$pH, BEL_8$pH, BEL_9$pH, BEL_10$pH, BEL_11$pH,BEL_12$pH, BEL_13$pH, BEL_14$pH,
+        xlab = "station", ylab = "pH", 
+        main = "BELGIUM", names = c("1", "6", "7", "8", "9", "10", "11", "12", "13", "14"
+        ))
+
+#Comparing BOD: 7 is excessively high 
+boxplot(BEL_1$BOD, BEL_6$BOD, BEL_7$BOD, BEL_8$BOD, BEL_9$BOD, BEL_10$BOD, BEL_11$BOD,BEL_12$BOD, BEL_13$BOD, BEL_14$BOD,
+        xlab = "station", ylab = "BOD", 
+        main = "BELGIUM", names = c("1", "6", "7", "8", "9", "10", "11", "12", "13", "14"
+        ))
+
+#Comparing COD: 7 is excessively high
+boxplot(BEL_1$COD, BEL_6$COD, BEL_7$COD, BEL_8$COD, BEL_9$COD, BEL_10$COD, BEL_11$COD,BEL_12$COD, BEL_13$COD, BEL_14$COD,
+        xlab = "station", ylab = "COD", 
+        main = "BELGIUM", names = c("1", "6", "7", "8", "9", "10", "11", "12", "13", "14"
+        ))
+
+#Comparing Hg: all quite low (policy on Hg is strong) 
+boxplot(BEL_1$`Hg-Tot`, BEL_6$`Hg-Tot`, BEL_7$`Hg-Tot`, BEL_8$`Hg-Tot`, BEL_9$`Hg-Tot`, BEL_10$`Hg-Tot`, BEL_11$`Hg-Tot`,BEL_12$`Hg-Tot`, BEL_13$`Hg-Tot`, BEL_14$`Hg-Tot`,
+        xlab = "station", ylab = "Hg in mg/L", 
+        main = "BELGIUM", names = c("1", "6", "7", "8", "9", "10", "11", "12", "13", "14"
+        ))
+
+#Comparing Cd: 7 is excessively high
+boxplot(BEL_1$`Cd-Tot`, BEL_6$`Cd-Tot`, BEL_7$`Cd-Tot`, BEL_8$`Cd-Tot`, BEL_9$`Cd-Tot`, BEL_10$`Cd-Tot`, BEL_11$`Cd-Tot`,BEL_12$`Cd-Tot`, BEL_13$`Cd-Tot`, BEL_14$`Cd-Tot`,
+        xlab = "station", ylab = "Cd in mg/L", 
+        main = "BELGIUM", names = c("1", "6", "7", "8", "9", "10", "11", "12", "13", "14"
+        ))
+
